@@ -1,0 +1,792 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Aspose.Video</name>
+  </assembly>
+  <members>
+    <!-- Badly formed XML comment ignored for member "M:Aspose.Video.Core.AudioEditor.RemoveAudio(Aspose.Video.Video,Aspose.Video.Models.IFile,System.Collections.Generic.List{System.Int32},System.EventHandler{Aspose.Video.Core.Utils.ProgressEventArgs},System.String)" -->
+    <!-- Badly formed XML comment ignored for member "M:Aspose.Video.Core.BuildCommand.DetachAudioCommand(Aspose.Video.Video,System.Collections.Generic.Dictionary{System.Int32,System.String})" -->
+    <member name="T:Aspose.Video.Core.Utils.ConversionCompleteEventArgs">
+      <summary>
+            Class represents callback trigger and implements EventArgs class
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Core.Utils.ConversionCompleteEventArgs.#ctor(System.Int64,System.Int64,System.Int64,System.Double,System.Int32,System.Nullable{System.Double})">
+      <summary>
+            Raises notification once conversion is complete
+            </summary>
+      <param name="processed">Duration of the media which has been processed</param>
+      <param name="totalDuration">The total duration of the original media</param>
+      <param name="frame">The specific frame the conversion process is on</param>
+      <param name="fps">The frames converted per second</param>
+      <param name="sizeKb">The current size in Kb of the converted media</param>
+      <param name="bitrate">The bit rate of the converted media</param>
+    </member>
+    <member name="M:Aspose.Video.Core.Utils.ProgressEventArgs.#ctor(System.Int64,System.Int64,System.Nullable{System.Int64},System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Double})">
+      <summary>
+            Raises notifications on the conversion process
+            </summary>
+      <param name="processed">Duration of the media which has been processed</param>
+      <param name="totalDuration">The total duration of the original media</param>
+      <param name="frame">The specific frame the conversion process is on</param>
+      <param name="fps">The frames converted per second</param>
+      <param name="sizeKb">The current size in Kb of the converted media</param>
+      <param name="bitrate">The bit rate of the converted media</param>
+    </member>
+    <member name="T:Aspose.Video.License">
+      <summary>
+            Class which allows to set the license
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.License.SetLicense(System.String)">
+      <summary>
+            Apply the license
+            </summary>
+      <param name="licensePath">Path to the license file</param>
+    </member>
+    <member name="M:Aspose.Video.License.SetLicense(System.IO.Stream)">
+      <summary>
+            Apply the license
+            </summary>
+      <param name="licensePath">Path to the license file</param>
+    </member>
+    <member name="M:Aspose.Video.License.IsLicensed">
+      <summary>
+            Check if the lices is applyed
+            </summary>
+      <returns>true if applyed and false if not</returns>
+    </member>
+    <member name="T:Aspose.Video.Models.AudioContainer">
+      <summary>
+            Class represents Audio track
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.AudioContainer.getPath">
+      <summary>
+            Get audio file path
+            </summary>
+      <returns>string</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.AudioContainer.setPath(System.String)">
+      <summary>
+            Set audio file path
+            </summary>
+      <param name="path">string</param>
+    </member>
+    <member name="M:Aspose.Video.Models.AudioContainer.getStart">
+      <summary>
+            Get start position milliseconds
+            </summary>
+      <returns>long</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.AudioContainer.setStart(System.Int64)">
+      <summary>
+            Set start position milliseconds
+            </summary>
+      <param name="start">long</param>
+    </member>
+    <member name="M:Aspose.Video.Models.AudioContainer.getEnd">
+      <summary>
+            Get end position milliseconds
+            </summary>
+      <returns>long</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.AudioContainer.setEnd(System.Int64)">
+      <summary>
+            Set end position milliseconds
+            </summary>
+      <param name="end">long</param>
+    </member>
+    <member name="M:Aspose.Video.Models.AudioContainer.getOffset">
+      <summary>
+            Get audio offset milliseconds
+            </summary>
+      <returns>long</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.AudioContainer.setOffset(System.Int64)">
+      <summary>
+            Set audio offset milisseconds
+            </summary>
+      <param name="offset">long</param>
+    </member>
+    <member name="M:Aspose.Video.Models.AudioContainer.getVolume">
+      <summary>
+            Get volume level percentage
+            </summary>
+      <returns>int</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.AudioContainer.setVolume(System.Int32)">
+      <summary>
+            Set volume percentage
+            </summary>
+      <param name="volume">int</param>
+    </member>
+    <member name="T:Aspose.Video.Models.audio.AudioCodec">
+      <summary>
+            Enum class represents supported audio codecs
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.audio.AudioSampleRate">
+      <summary>
+            Enum class represents supported audio sample rates
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.AppendOptions">
+      <summary>
+            Class represents extract video part options
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.SaveOptions">
+      <summary>
+            Main class represetns possible save options
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.AppendOptions.setPreset(Aspose.Video.Models.Preset)">
+      <summary>
+            Set the processing preset
+            </summary>
+      <param name="preset">Preset</param>
+    </member>
+    <member name="M:Aspose.Video.Models.AppendOptions.getPreset">
+      <summary>
+            Returns the preset
+            </summary>
+      <returns>Preset</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.AppendOptions.getCodec">
+      <summary>
+            Get result video codec
+            </summary>
+      <returns>VideoCodec</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.AppendOptions.setCodec(Aspose.Video.Models.video.VideoCodec)">
+      <summary>
+            Set video codec used to encode the result video
+            </summary>
+      <param name="codec">VideoCodec</param>
+    </member>
+    <member name="T:Aspose.Video.Models.ExtractOptions">
+      <summary>
+            Class represents extract video part options
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.ExtractOptions.setStart(System.Int64)">
+      <summary>
+            Set start position
+            </summary>
+      <param name="start">long time position in milliseconds</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ExtractOptions.getStart">
+      <summary>
+            Get current start position
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ExtractOptions.setOffset(System.Int64)">
+      <summary>
+            Set end point in milliseconds on which video will end
+            </summary>
+      <param name="offset">
+      </param>
+    </member>
+    <member name="M:Aspose.Video.Models.ExtractOptions.getOffset">
+      <summary>
+            Get current end position
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="T:Aspose.Video.Models.Preset">
+      <summary>
+            Enum representation of the video proccessing preset level
+            </summary>
+    </member>
+    <member name="F:Aspose.Video.Models.Preset.Ultrafast">
+      <summary>
+            Ultra fast but ultra low quality
+            </summary>
+    </member>
+    <member name="F:Aspose.Video.Models.Preset.Superfast">
+      <summary>
+            Super fast but super low quality
+            </summary>
+    </member>
+    <member name="F:Aspose.Video.Models.Preset.Veryfast">
+      <summary>
+            Very fast but very low quality
+            </summary>
+    </member>
+    <member name="F:Aspose.Video.Models.Preset.Faster">
+      <summary>
+            Faster but low quality
+            </summary>
+    </member>
+    <member name="F:Aspose.Video.Models.Preset.Fast">
+      <summary>
+            Fast but low quality
+            </summary>
+    </member>
+    <member name="F:Aspose.Video.Models.Preset.Medium">
+      <summary>
+            Medium processing speed and midium quality
+            </summary>
+    </member>
+    <member name="F:Aspose.Video.Models.Preset.Slow">
+      <summary>
+            Slow processing but better quality
+            </summary>
+    </member>
+    <member name="F:Aspose.Video.Models.Preset.Slower">
+      <summary>
+            Slower but much more better quality
+            </summary>
+    </member>
+    <member name="F:Aspose.Video.Models.Preset.Veryslow">
+      <summary>
+            Very slow processing but almost no quality losing
+            </summary>
+    </member>
+    <member name="F:Aspose.Video.Models.Preset.Placebo">
+      <summary>
+            Ultra slow but the origin quality is kept
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.ConvertOptions">
+      <summary>
+            Class used to set all options of the result video file
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.#ctor">
+      <summary>
+            Initializing default data
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setVideoAspectRatio(Aspose.Video.Models.video.VideoAspectRatio)">
+      <summary>
+            Set new video aspect ratio
+            </summary>
+      <param name="aspectRatio">VideoResolution new aspect ratio</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getVideoAspectRatio">
+      <summary>
+            Get current aspect ratio
+            </summary>
+      <returns>VideoResolution</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getPTS">
+      <summary>
+            Get result video PTS
+            </summary>
+      <returns>double</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setPTS(Aspose.Video.Models.video.VideoPts)">
+      <summary>
+            Set result video PTS
+            </summary>
+      <param name="pts">double</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getCodec">
+      <summary>
+            Get result video codec
+            </summary>
+      <returns>VideoCodec</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setCodec(Aspose.Video.Models.video.VideoCodec)">
+      <summary>
+            Set video codec used to encode the result video
+            </summary>
+      <param name="codec">VideoCodec</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getStandard">
+      <summary>
+            Get the video standard
+            </summary>
+      <returns>VideoStandard</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setStandard(Aspose.Video.Models.video.VideoStandard)">
+      <summary>
+            Set result video standard
+            </summary>
+      <param name="standard">VideoStandard</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getFrameSize">
+      <summary>
+            Get result resolution
+            </summary>
+      <returns>String</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setFrameSize(System.String)">
+      <summary>
+            Set result resolution
+            </summary>
+      <param name="resolution">String</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getBitrate">
+      <summary>
+            Get resulting video bitrate
+            </summary>
+      <returns>int</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setBitrate(System.Int32)">
+      <summary>
+            Set resulting video bitrate
+            </summary>
+      <param name="bitrate">int</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getFPS">
+      <summary>
+            Get resulting video FPS
+            </summary>
+      <returns>int</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setFPS(System.Int32)">
+      <summary>
+            Set resulting video FPS
+            </summary>
+      <param name="FPS">int</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getWatermarkImage">
+      <summary>
+            Get watermark image object
+            </summary>
+      <returns>WatermarkImage</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setWatermarkImage(Aspose.Video.Models.video.WatermarkImage)">
+      <summary>
+            Set watermark image which will be added to the result video
+            </summary>
+      <param name="watermark">WatermarkImage</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getWatermarkText">
+      <summary>
+            Get watermark text object
+            </summary>
+      <returns>WatermarkText</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setWatermarkText(Aspose.Video.Models.video.WatermarkText)">
+      <summary>
+            Set watermark text which will be added to the result video
+            </summary>
+      <param name="watermark">WatermarkText</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setPreset(Aspose.Video.Models.Preset)">
+      <summary>
+            Set the processing preset
+            </summary>
+      <param name="preset">Preset</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getPreset">
+      <summary>
+            Returns the preset
+            </summary>
+      <returns>Preset</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.setVolume(System.Int32)">
+      <summary>
+            Set result volume level in percentage
+            </summary>
+      <param name="volume">int</param>
+    </member>
+    <member name="M:Aspose.Video.Models.ConvertOptions.getVolume">
+      <summary>
+            Get current volume level
+            </summary>
+      <returns>int</returns>
+    </member>
+    <member name="T:Aspose.Video.Models.Metadata">
+      <summary>
+            The class represents original video file metadata
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.#ctor">
+      <summary>
+            Initialize read-only metadata
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.getVideo">
+      <summary>
+            Get video metadata
+            </summary>
+      <returns>Aspose.Video.Models.Metadata.Video</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.getAudio">
+      <summary>
+            Get Audio metadata
+            </summary>
+      <returns>List[Aspose.Video.Models.Metadata.Audio]</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.getPath">
+      <summary>
+            Get original video file path
+            </summary>
+      <returns>string</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.getDuration">
+      <summary>
+            Get original video duration in milliseconds
+            </summary>
+      <returns>long</returns>
+    </member>
+    <member name="T:Aspose.Video.Models.Metadata.Video">
+            Metadata.Video
+        </member>
+    <member name="M:Aspose.Video.Models.Metadata.Video.getFormat">
+      <summary>
+            Get the video format
+            </summary>
+      <returns>string</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.Video.getColorModel">
+      <summary>
+            Get color model
+            </summary>
+      <returns>string</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.Video.getFrameSize">
+      <summary>
+            Get original resolution
+            </summary>
+      <returns>string</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.Video.getBitrate">
+      <summary>
+            Get original video bit rate
+            </summary>
+      <returns>int</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.Video.getFPS">
+      <summary>
+            Get original FPS
+            </summary>
+      <returns>int</returns>
+    </member>
+    <member name="T:Aspose.Video.Models.Metadata.Audio">
+            Metadata.Audio
+        </member>
+    <member name="M:Aspose.Video.Models.Metadata.Audio.getTrackId">
+      <summary>
+            Get audio track id
+            </summary>
+      <returns>int</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.Audio.getFormat">
+      <summary>
+            Get audio format
+            </summary>
+      <returns>string</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.Audio.getSampleRate">
+      <summary>
+            Get audio sample rate
+            </summary>
+      <returns>string</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.Audio.getChannelOutput">
+      <summary>
+            Get channel output
+            </summary>
+      <returns>string</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.Metadata.Audio.getBitrate">
+      <summary>
+            Get audio bitrate
+            </summary>
+      <returns>int</returns>
+    </member>
+    <member name="T:Aspose.Video.Models.SaveFormat">
+      <summary>
+            Enum representation of the supported video formats
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoAspectRatio">
+      <summary>
+            Enum represents supported aspect ratios
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.WatermarkText">
+      <summary>
+            Class represent the watermark text
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.video.WatermarkText.#ctor">
+      <summary>
+            Constructor which implements default values
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution">
+      <summary>
+            Class represetns supported resolutions and aspect ratios
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_3x2">
+      <summary>
+            Class represents possible resolutions for R3x2 aspect ratio
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_3x2.Hvga">
+      <summary>
+            Class represents HVGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_3x2.Wsvga">
+      <summary>
+            Class represents WSVGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_3x2.Xga">
+      <summary>
+            Class represents XGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_3x2.Wxga">
+      <summary>
+            Class represents WXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3">
+      <summary>
+            Class represents possible resolutions for R4x3 aspect ratio
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3.Qvga">
+      <summary>
+            Class represents QVGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3.Sif">
+      <summary>
+            Class represents SIF resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3.Vga">
+      <summary>
+            Class represents VGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3.Pal">
+      <summary>
+            Class represents PAL resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3.Svga">
+      <summary>
+            Class represents SVGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3.Xga">
+      <summary>
+            Class represents XGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3.Hxga">
+      <summary>
+            Class represents HXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3.Sxga">
+      <summary>
+            Class represents SXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3.Uxga">
+      <summary>
+            Class represents UXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_4x3.Qxga">
+      <summary>
+            Class represents QXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_5x3">
+      <summary>
+            Class represents possible resolutions for R5x3 aspect ratio
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_5x3.Wvga">
+      <summary>
+            Class represents WVGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_5x3.Wxga">
+      <summary>
+            Class represents WXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_5x4">
+      <summary>
+            Class represents possible resolutions for R5x4 aspect ratio
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_5x4.Sxga">
+      <summary>
+            Class represents SXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_5x4.Qsxga">
+      <summary>
+            Class represents QSXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x9">
+      <summary>
+            Class represents possible resolutions for R16x9 aspect ratio
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x9.Wvga">
+      <summary>
+            Class represents WVGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x9.Pal">
+      <summary>
+            Class represents PAL resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x9.Hd720">
+      <summary>
+            Class represents HD720 resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x9.Wxga">
+      <summary>
+            Class represents WXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x9.Hd1080">
+      <summary>
+            Class represents HD1080 resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x9.Wqhd">
+      <summary>
+            Class represents WQHD resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x9.Uhd">
+      <summary>
+            Class represents UHD resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x10">
+      <summary>
+            Class represents possible resolutions for R16x10 aspect ratio
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x10.Cga">
+      <summary>
+            Class represents CGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x10.Wxga">
+      <summary>
+            Class represents WXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x10.Wsxga">
+      <summary>
+            Class represents WSXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x10.Wuxga">
+      <summary>
+            Class represents WUXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_16x10.Wqxga">
+      <summary>
+            Class represents WQXGA resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_17x9">
+      <summary>
+            Class represents possible resolutions for R17x9 aspect ratio
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_17x9.x2K">
+      <summary>
+            Class represents 2K resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoResolution.R_17x9.x4K">
+      <summary>
+            Class represents 4K resolution
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoCodec">
+      <summary>
+            Enum class represents supported video codecs
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoPts">
+      <summary>
+            Class used to set the video playback speed
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.VideoStandard">
+      <summary>
+            Video standarts object
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.WatermarkImage">
+      <summary>
+            Watermark image object
+            </summary>
+    </member>
+    <member name="T:Aspose.Video.Video">
+      <summary>
+            The main class via which all operations with the video file are made
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Video.#ctor(System.String,System.String)">
+      <summary>
+            Creates initial Video object
+            </summary>
+      <param name="filePath">string Original video file path</param>
+      <param name="ffmpegPath">string Custom path of the FFMpeg executable</param>
+    </member>
+    <member name="M:Aspose.Video.Video.Extract(System.String,Aspose.Video.Models.ExtractOptions)">
+      <summary>
+            Extract part of the video
+            </summary>
+      <param name="path">string path to the destination file</param>
+      <param name="options">ExtractOptions</param>
+    </member>
+    <member name="M:Aspose.Video.Video.ExtractThumbnail(System.String,System.Int64)">
+      <summary>
+            Allows to exctract and save the frame as image
+            </summary>
+      <param name="thumbnailOffset">Time position from which the frame should be taken in milliseconds</param>
+      <param name="path">Path where the image should be saved</param>
+      <example>Thumbnail.png </example>
+    </member>
+    <member name="M:Aspose.Video.Video.Append(System.String,Aspose.Video.Video,Aspose.Video.Models.AppendOptions)">
+      <summary>
+            Append one video file to another. The appended file will be added in the end of the original video
+            </summary>
+      <param name="path">string path for the result file</param>
+      <param name="videoToAppend">Video object represents video file to append</param>
+      <param name="options">AppendOptions</param>
+    </member>
+    <member name="M:Aspose.Video.Video.Convert(System.String,Aspose.Video.Models.ConvertOptions)">
+      <summary>
+            Convert video to another format
+            </summary>
+      <param name="path">string path for the result file</param>
+      <param name="options">ConvertOptions</param>
+    </member>
+    <member name="M:Aspose.Video.Video.getMetadata">
+      <summary>
+            Get origin video metadata
+            </summary>
+      <returns>Metadata</returns>
+    </member>
+    <member name="M:Aspose.Video.Video.setFfmpegCustomPath(System.String)">
+      <summary>
+            Set FFmpeg executable path
+            </summary>
+      <param name="path">String path to the FFMPeg executable</param>
+    </member>
+  </members>
+</doc>
