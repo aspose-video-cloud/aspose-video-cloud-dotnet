@@ -45,7 +45,7 @@ The examples below show how your application have to initiate and convert "avi" 
 ```csharp
 var VideoApi = new VideoApi(AppKey, AppSID);
 ConvertOptions options = new ConvertOptions();
-var request = new PostConvertVideoRequest("original.avi", "mp4", "destination.mp4, options);
+var request = new PostConvertVideoRequest("original.avi", "mp4", "destination.mp4", options);
 VideoApi.PostConvertVideo(request);        
 
 ```
