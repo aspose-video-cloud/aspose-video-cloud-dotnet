@@ -197,37 +197,37 @@ namespace Aspose.Video.Cloud.Sdk.Model
             /// <summary>
             /// Enum R32 for "R3_2"
             /// </summary>            
-            R3_2,
+            R32,
             
             /// <summary>
             /// Enum R43 for "R4_3"
             /// </summary>            
-            R4_3,
+            R43,
             
             /// <summary>
             /// Enum R53 for "R5_3"
             /// </summary>            
-            R5_3,
+            R53,
             
             /// <summary>
             /// Enum R54 for "R5_4"
             /// </summary>            
-            R5_4,
+            R54,
             
             /// <summary>
             /// Enum R85 for "R8_5"
             /// </summary>            
-            R8_5,
+            R85,
             
             /// <summary>
             /// Enum R169 for "R16_9"
             /// </summary>            
-            R16_9,
+            R169,
             
             /// <summary>
             /// Enum R179 for "R17_9"
             /// </summary>            
-            R17_9            
+            R179            
         }
 
         /// <summary>

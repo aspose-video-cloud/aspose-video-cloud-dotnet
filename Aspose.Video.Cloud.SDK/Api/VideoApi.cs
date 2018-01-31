@@ -263,6 +263,69 @@ namespace Aspose.Video.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Add audio to original video. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostAddAudioRequest" /></param> 
+        /// <returns><see cref="VideoResponse"/></returns>            
+        public VideoResponse PostAddAudio(PostAddAudioRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostAddAudio");
+            }
+
+            // verify the required parameter 'destinationPath' is set
+            if (request.DestinationPath == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'destinationPath' when calling PostAddAudio");
+            }
+
+            // verify the required parameter 'audio' is set
+            if (request.Audio == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'audio' when calling PostAddAudio");
+            }
+
+            // create path and map variables
+            var resourcePath = "/video/{name}/addAudio?appSid={appSid}&amp;destinationPath=[destinationPath]&amp;folder=[folder]&amp;storage=[storage]&amp;destFileName=[destFileName]";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+            resourcePath = this.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = this.AddQueryParameter(resourcePath, "destinationPath", request.DestinationPath);
+            resourcePath = this.AddQueryParameter(resourcePath, "folder", request.Folder);
+            resourcePath = this.AddQueryParameter(resourcePath, "storage", request.Storage);
+            resourcePath = this.AddQueryParameter(resourcePath, "destFileName", request.DestFileName);
+            var postBody = request.Audio; // http body (model) parameter
+            try 
+            {                               
+                var response = this.apiInvoker.InvokeApi(
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
+                if (response != null)
+                {
+                    return (VideoResponse)SerializationHelper.Deserialize(response, typeof(VideoResponse));
+                }
+                    
+                return null;
+            } 
+            catch (ApiException ex) 
+            {
+                if (ex.ErrorCode == 404) 
+                {
+                    return null;
+                }
+                
+                throw;                
+            }
+        }
+
+        /// <summary>
         /// Append video to original video. 
         /// </summary>
         /// <param name="request">Request. <see cref="PostAppendVideoRequest" /></param> 
@@ -370,18 +433,75 @@ namespace Aspose.Video.Cloud.Sdk.Api
             resourcePath = this.AddQueryParameter(resourcePath, "destFileName", request.DestFileName);
             var postBody = request.Options; // http body (model) parameter
             try 
+            {                               
+                    return this.apiInvoker.InvokeBinaryApi(
+                        resourcePath, 
+                        "POST", 
+                        postBody, 
+                        null, 
+                        null) as SaveResponse;
+            } 
+            catch (ApiException ex) 
             {
+                if (ex.ErrorCode == 404) 
+                {
+                    return null;
+                }
+                
+                throw;                
+            }
+        }
+
+        /// <summary>
+        /// Extract audio from the original video. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostExtractAudioRequest" /></param> 
+        /// <returns><see cref="VideoResponse"/></returns>            
+        public VideoResponse PostExtractAudio(PostExtractAudioRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostExtractAudio");
+            }
+
+            // verify the required parameter 'destinationPath' is set
+            if (request.DestinationPath == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'destinationPath' when calling PostExtractAudio");
+            }
+
+            // verify the required parameter 'trackId' is set
+            if (request.TrackId == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'trackId' when calling PostExtractAudio");
+            }
+
+            // create path and map variables
+            var resourcePath = "/video/{name}/extractAudio?appSid={appSid}&amp;destinationPath=[destinationPath]&amp;folder=[folder]&amp;storage=[storage]&amp;destFileName=[destFileName]";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+            resourcePath = this.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = this.AddQueryParameter(resourcePath, "destinationPath", request.DestinationPath);
+            resourcePath = this.AddQueryParameter(resourcePath, "folder", request.Folder);
+            resourcePath = this.AddQueryParameter(resourcePath, "storage", request.Storage);
+            resourcePath = this.AddQueryParameter(resourcePath, "destFileName", request.DestFileName);
+            var postBody = request.TrackId; // http body (model) parameter
+            try 
+            {                               
                 var response = this.apiInvoker.InvokeApi(
-                 resourcePath,
-                 "POST",
-                 postBody,
-                 null,
-                 null);
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
                 if (response != null)
                 {
-                    return (SaveResponse)SerializationHelper.Deserialize(response, typeof(SaveResponse));
+                    return (VideoResponse)SerializationHelper.Deserialize(response, typeof(VideoResponse));
                 }
-
+                    
                 return null;
             } 
             catch (ApiException ex) 
@@ -563,6 +683,69 @@ namespace Aspose.Video.Cloud.Sdk.Api
                 if (response != null)
                 {
                     return (SaveResponse)SerializationHelper.Deserialize(response, typeof(SaveResponse));
+                }
+                    
+                return null;
+            } 
+            catch (ApiException ex) 
+            {
+                if (ex.ErrorCode == 404) 
+                {
+                    return null;
+                }
+                
+                throw;                
+            }
+        }
+
+        /// <summary>
+        /// Remove audio from the original video. 
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostRemoveAudioRequest" /></param> 
+        /// <returns><see cref="VideoResponse"/></returns>            
+        public VideoResponse PostRemoveAudio(PostRemoveAudioRequest request)
+        {
+            // verify the required parameter 'name' is set
+            if (request.Name == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'name' when calling PostRemoveAudio");
+            }
+
+            // verify the required parameter 'destinationPath' is set
+            if (request.DestinationPath == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'destinationPath' when calling PostRemoveAudio");
+            }
+
+            // verify the required parameter 'tracksId' is set
+            if (request.TracksId == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'tracksId' when calling PostRemoveAudio");
+            }
+
+            // create path and map variables
+            var resourcePath = "/video/{name}/removeAudio?appSid={appSid}&amp;destinationPath=[destinationPath]&amp;folder=[folder]&amp;storage=[storage]&amp;destFileName=[destFileName]";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+            resourcePath = this.AddPathParameter(resourcePath, "name", request.Name);
+            resourcePath = this.AddQueryParameter(resourcePath, "destinationPath", request.DestinationPath);
+            resourcePath = this.AddQueryParameter(resourcePath, "folder", request.Folder);
+            resourcePath = this.AddQueryParameter(resourcePath, "storage", request.Storage);
+            resourcePath = this.AddQueryParameter(resourcePath, "destFileName", request.DestFileName);
+            var postBody = request.TracksId; // http body (model) parameter
+            try 
+            {                               
+                var response = this.apiInvoker.InvokeApi(
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
+                if (response != null)
+                {
+                    return (VideoResponse)SerializationHelper.Deserialize(response, typeof(VideoResponse));
                 }
                     
                 return null;
