@@ -2,13 +2,20 @@
 This repository contains Aspose.Video Cloud SDK for .NET source code. This SDK allows you to work with Aspose.Video Cloud REST APIs in your .NET applications quickly and easily, with zero initial cost.
 
 # Key Features
-* Conversion between various document-related formats (20+ formats supported), including PDF<->Word conversion
-* Mail merge and reports generation 
-* Splitting Word documents
-* Accessing Word document metadata and statistics
-* Find and replace
-* Watermarks and protection
-* Full read & write access to Document Object Model, including sections, paragraphs, text, images, tables, headers/footers and many others
+* Add image watermark
+* Add text watermark
+* Change aspect ratio
+* Change bitrate
+* Change FPS
+* Change resolution
+* Encode video with different video codecs
+* Convert video to different video formats
+* Extract/cut/trim video files
+* Extract thumbnail image from the specific time position
+* Set volume level
+* Get video metadata
+* Append video files
+* Add audio track
 
 See [API Reference](https://apireference.aspose.cloud/Video/) for full API specification.
 
