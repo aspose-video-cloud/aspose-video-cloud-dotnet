@@ -200,7 +200,7 @@ namespace Aspose.Video.Cloud.Sdk.Tests.Video
             var fullName = Path.Combine(this.dataFolder, localName);
             var resultPath = Path.Combine(this.dataFolder, "aspectratio.avi");
             ConvertOptions options = new ConvertOptions();
-            options.AspectRatio = ConvertOptions.AspectRatioEnum.R3_2;
+            options.AspectRatio = ConvertOptions.AspectRatioEnum.R32;
 
             this.StorageApi.PutCreate(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir() + localName));
 

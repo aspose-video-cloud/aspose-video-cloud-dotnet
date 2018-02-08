@@ -46,7 +46,7 @@ namespace Aspose.Video.Cloud.Sdk.Tests.Video
         /// Test for converting Video to one of the available formats        
         /// </summary>
         [TestMethod]
-        public void TestPostExtractVideo()
+        public void TestPostExtractThumbnail()
         {
             var localName = "sample.mp4";
             var destPath = Path.Combine(this.dataFolder, "thumbnail.png");

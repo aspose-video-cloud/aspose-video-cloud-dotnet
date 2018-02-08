@@ -48,16 +48,21 @@ namespace Aspose.Video.Cloud.Sdk.Tests.Video
         [TestMethod]
         public void TestPostAddAudio()
         {
-            string[] images = Directory.GetFiles(BaseTestContext.GetDataDir() + "images");
-            foreach (string image in images)
-            {
-                var fullName = Path.Combine(this.dataFolder, Path.GetFileName(image));
-                this.StorageApi.PutCreate(fullName, null, null, File.ReadAllBytes(image));
-            }
+            var localName = "sample.avi";
+            var remoteName = "TestPostAddAudio.avi";
+            var fullName = Path.Combine(this.dataFolder, remoteName);
+            var destFileName = Path.Combine(BaseTestOutPath, remoteName);
+            var audioFile = "test.wav";
+            var destAudio = Path.Combine(this.dataFolder, audioFile);
 
-            var destFileName = Path.Combine(BaseTestOutPath, "AddAudio.mp4");
-            var request = new PostAppendVideoRequest(remoteName, destFileName, options, this.dataFolder);
-            var actual = this.VideoApi.PostAppendVideo(request);
+            this.StorageApi.PutCreate(fullName, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir() + localName));
+            this.StorageApi.PutCreate(destAudio, null, null, File.ReadAllBytes(BaseTestContext.GetDataDir() + audioFile));
+
+            AudioContainer options = new AudioContainer();
+            options.Path = destAudio;
+
+            var request = new PostAddAudioRequest(remoteName, destFileName, options, this.dataFolder);
+            var actual = this.VideoApi.PostAddAudio(request);
 
             Assert.AreEqual(200, System.Convert.ToInt32(actual.Code.ToString()));
         }

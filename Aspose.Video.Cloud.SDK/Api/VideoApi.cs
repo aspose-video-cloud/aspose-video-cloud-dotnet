@@ -433,13 +433,19 @@ namespace Aspose.Video.Cloud.Sdk.Api
             resourcePath = this.AddQueryParameter(resourcePath, "destFileName", request.DestFileName);
             var postBody = request.Options; // http body (model) parameter
             try 
-            {                               
-                    return this.apiInvoker.InvokeBinaryApi(
-                        resourcePath, 
-                        "POST", 
-                        postBody, 
-                        null, 
-                        null) as SaveResponse;
+            {
+                var response = this.apiInvoker.InvokeApi(
+               resourcePath,
+               "POST",
+               postBody,
+               null,
+               null);
+                if (response != null)
+                {
+                    return (SaveResponse)SerializationHelper.Deserialize(response, typeof(SaveResponse));
+                }
+
+                return null;
             } 
             catch (ApiException ex) 
             {
