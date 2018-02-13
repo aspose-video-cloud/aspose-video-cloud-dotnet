@@ -8,3 +8,7 @@
 /TestResults
 /Aspose.Video.Cloud.Sdk.v11.suo
 /.vs
+sign-keys
+*.nuspec
+*.Nuget.csproj
+*.nupkg

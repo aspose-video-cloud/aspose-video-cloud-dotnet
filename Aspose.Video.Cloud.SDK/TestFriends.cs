@@ -23,4 +23,4 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("VideoTest")]
+//[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("VideoTest")]
