@@ -5,7 +5,6 @@
   </assembly>
   <members>
     <!-- Badly formed XML comment ignored for member "M:Aspose.Video.Core.AudioEditor.RemoveAudio(Aspose.Video.Video,Aspose.Video.Models.IFile,System.Collections.Generic.List{System.Int32},System.EventHandler{Aspose.Video.Core.Utils.ProgressEventArgs},System.String)" -->
-    <!-- Badly formed XML comment ignored for member "M:Aspose.Video.Core.BuildCommand.DetachAudioCommand(Aspose.Video.Video,System.Collections.Generic.Dictionary{System.Int32,System.String})" -->
     <member name="T:Aspose.Video.Core.Utils.ConversionCompleteEventArgs">
       <summary>
             Class represents callback trigger and implements EventArgs class
@@ -134,11 +133,6 @@
     <member name="T:Aspose.Video.Models.AppendOptions">
       <summary>
             Class represents extract video part options
-            </summary>
-    </member>
-    <member name="T:Aspose.Video.Models.SaveOptions">
-      <summary>
-            Main class represetns possible save options
             </summary>
     </member>
     <member name="M:Aspose.Video.Models.AppendOptions.setPreset(Aspose.Video.Models.Preset)">
@@ -499,10 +493,61 @@
             Enum representation of the supported video formats
             </summary>
     </member>
+    <member name="T:Aspose.Video.Models.SaveOptions">
+      <summary>
+            Main class represetns possible save options
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.SlideshowOptions.#ctor">
+      <summary>
+            Provides number of options for slideshow creation.
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.SlideshowOptions.getSlides">
+      <summary>
+            Get source images paths
+            </summary>
+      <returns>int</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.SlideshowOptions.setSlides(System.Collections.Generic.List{Aspose.Video.Models.video.Slide})">
+      <summary>
+            Set source images
+            </summary>
+      <param name="slides">List{Slide}</param>
+    </member>
     <member name="T:Aspose.Video.Models.video.VideoAspectRatio">
       <summary>
             Enum represents supported aspect ratios
             </summary>
+    </member>
+    <member name="T:Aspose.Video.Models.video.Slide">
+      <summary>
+            Class used to set the video slide
+            </summary>
+    </member>
+    <member name="M:Aspose.Video.Models.video.Slide.setDuration(System.Int32)">
+      <summary>
+            Set the duration of the slide in milliseconds
+            </summary>
+      <param name="duration">int</param>
+    </member>
+    <member name="M:Aspose.Video.Models.video.Slide.getDuration">
+      <summary>
+            return the duration of the slide.
+            </summary>
+      <returns>int milliseconds</returns>
+    </member>
+    <member name="M:Aspose.Video.Models.video.Slide.setPath(System.String)">
+      <summary>
+            set the path of teh image used for slide
+            </summary>
+      <param name="path">string</param>
+    </member>
+    <member name="M:Aspose.Video.Models.video.Slide.getPath">
+      <summary>
+            Get the path of the slide image
+            </summary>
+      <returns>string</returns>
     </member>
     <member name="T:Aspose.Video.Models.video.WatermarkText">
       <summary>
@@ -739,6 +784,11 @@
             The main class via which all operations with the video file are made
             </summary>
     </member>
+    <member name="M:Aspose.Video.Video.#ctor(System.String)">
+      <summary>
+            Creates initial Video object
+            </summary>
+    </member>
     <member name="M:Aspose.Video.Video.#ctor(System.String,System.String)">
       <summary>
             Creates initial Video object
@@ -769,9 +819,37 @@
       <param name="videoToAppend">Video object represents video file to append</param>
       <param name="options">AppendOptions</param>
     </member>
+    <member name="M:Aspose.Video.Video.AddAudio(System.String,Aspose.Video.Models.AudioContainer)">
+      <summary>
+            Add aditional audio track into the video file
+            </summary>
+      <param name="path">string path for the result file</param>
+      <param name="audio">AudioContainer</param>
+    </member>
+    <member name="M:Aspose.Video.Video.RemoveAudio(System.String,System.Collections.Generic.List{System.Int32})">
+      <summary>
+            Remove audio from the video file
+            </summary>
+      <param name="path">string path for the result file</param>
+      <param name="tracksId">List{int}</param>
+    </member>
+    <member name="M:Aspose.Video.Video.ExtractAudio(System.String,System.Int32)">
+      <summary>
+            Extract audio from the video file
+            </summary>
+      <param name="path">string path for the result file</param>
+      <param name="trackId">List{int}</param>
+    </member>
     <member name="M:Aspose.Video.Video.Convert(System.String,Aspose.Video.Models.ConvertOptions)">
       <summary>
             Convert video to another format
+            </summary>
+      <param name="path">string path for the result file</param>
+      <param name="options">ConvertOptions</param>
+    </member>
+    <member name="M:Aspose.Video.Video.CreateSlideshow(System.String,Aspose.Video.Models.SlideshowOptions)">
+      <summary>
+            Create slideshow video from image sequences
             </summary>
       <param name="path">string path for the result file</param>
       <param name="options">ConvertOptions</param>
