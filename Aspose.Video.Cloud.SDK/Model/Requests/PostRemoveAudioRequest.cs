@@ -24,13 +24,12 @@
 // --------------------------------------------------------------------------------------------------------------------
 namespace Aspose.Video.Cloud.Sdk.Model.Requests 
 {
-    using Aspose.Video.Cloud.Sdk.Model;
-    using System.Collections.Generic;
+  using Aspose.Video.Cloud.Sdk.Model; 
 
-    /// <summary>
-    /// Request model for <see cref="Aspose.Video.Cloud.Sdk.Api.VideoApi.PostRemoveAudio" /> operation.
-    /// </summary>  
-    public class PostRemoveAudioRequest : ICanModifyVideoFileRequest, IVideoFileRequest   
+  /// <summary>
+  /// Request model for <see cref="Aspose.Video.Cloud.Sdk.Api.VideoApi.PostRemoveAudio" /> operation.
+  /// </summary>  
+  public class PostRemoveAudioRequest : ICanModifyVideoFileRequest, IVideoFileRequest   
   {
         /// <summary>
         /// Initializes a new instance of the <see cref="PostRemoveAudioRequest"/> class.

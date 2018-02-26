@@ -433,18 +433,71 @@ namespace Aspose.Video.Cloud.Sdk.Api
             resourcePath = this.AddQueryParameter(resourcePath, "destFileName", request.DestFileName);
             var postBody = request.Options; // http body (model) parameter
             try 
-            {
+            {                               
                 var response = this.apiInvoker.InvokeApi(
-               resourcePath,
-               "POST",
-               postBody,
-               null,
-               null);
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
                 if (response != null)
                 {
                     return (SaveResponse)SerializationHelper.Deserialize(response, typeof(SaveResponse));
                 }
+                    
+                return null;
+            } 
+            catch (ApiException ex) 
+            {
+                if (ex.ErrorCode == 404) 
+                {
+                    return null;
+                }
+                
+                throw;                
+            }
+        }
 
+        /// <summary>
+        /// Create slideshow video from the images sequence   
+        /// </summary>
+        /// <param name="request">Request. <see cref="PostCreateSlideshowRequest" /></param> 
+        /// <returns><see cref="VideoResponse"/></returns>            
+        public VideoResponse PostCreateSlideshow(PostCreateSlideshowRequest request)
+        {
+            // verify the required parameter 'destinationPath' is set
+            if (request.DestinationPath == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'destinationPath' when calling PostCreateSlideshow");
+            }
+
+            // verify the required parameter 'slides' is set
+            if (request.Slides == null) 
+            {
+                throw new ApiException(400, "Missing required parameter 'slides' when calling PostCreateSlideshow");
+            }
+
+            // create path and map variables
+            var resourcePath = "/video/createSlideshow?appSid={appSid}&amp;destinationPath=[destinationPath]";
+            resourcePath = Regex
+                        .Replace(resourcePath, "\\*", string.Empty)
+                        .Replace("&amp;", "&")
+                        .Replace("/?", "?");
+            resourcePath = this.AddQueryParameter(resourcePath, "destinationPath", request.DestinationPath);
+            var postBody = request.Slides; // http body (model) parameter
+            try 
+            {                               
+                var response = this.apiInvoker.InvokeApi(
+                    resourcePath, 
+                    "POST", 
+                    postBody, 
+                    null, 
+                    null);
+                if (response != null)
+                {
+                    return (VideoResponse)SerializationHelper.Deserialize(response, typeof(VideoResponse));
+                }
+                    
                 return null;
             } 
             catch (ApiException ex) 
