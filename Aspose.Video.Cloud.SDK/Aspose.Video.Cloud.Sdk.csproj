@@ -84,11 +84,9 @@
     <Compile Include="Model\Requests\PostAddAudioRequest.cs" />
     <Compile Include="Model\Requests\PostAppendVideoRequest.cs" />
     <Compile Include="Model\Requests\PostConvertVideoRequest.cs" />
-    <Compile Include="Model\Requests\PostExtractAudioRequest.cs" />
     <Compile Include="Model\Requests\PostExtractThumbnailRequest.cs" />
     <Compile Include="Model\Requests\PostExtractVideoRequest.cs" />
     <Compile Include="Model\Requests\PostLoadWebVideoRequest.cs" />
-    <Compile Include="Model\Requests\PostRemoveAudioRequest.cs" />
     <Compile Include="Model\SaveOptionsData.cs" />
     <Compile Include="Model\SaveResponse.cs" />
     <Compile Include="Model\SaveResult.cs" />
