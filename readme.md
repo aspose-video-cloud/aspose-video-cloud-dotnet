@@ -17,7 +17,7 @@ This repository contains Aspose.Video Cloud SDK for .NET source code. This SDK a
 * Append video files
 * Add audio track
 
-See [API Reference](https://apireference.aspose.cloud/Video/) for full API specification.
+See [API Reference](https://apireference.aspose.cloud/video/) for full API specification.
 
 ## How to use the SDK?
 The complete source code is available in this repository folder. You can either directly use it in your project via source code or get [NuGet distribution](https://www.nuget.org/packages/Aspose.Video-Cloud/) (recommended). For more details, please visit our [documentation website](https://docs.aspose.cloud/display/Videocloud/Available+SDKs#AvailableSDKs-.NET).
