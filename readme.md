@@ -63,5 +63,11 @@ VideoApi.PostConvertVideo(request);
 - .NET Framework 2.0 or later
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/)
 
-## Contact Us
-Your feedback is very important to us. Please feel free to contact us using our [Support Forums](https://forum.aspose.cloud/c/Video).
+# Resources
++ [**Web API reference**](https://apireference.aspose.cloud/video/)
++ [**Website**](https://www.aspose.cloud/)
++ [**Product Home**](https://products.aspose.cloud/video)
++ [**Documentation**](https://docs.aspose.cloud/display/videocloud/Home)
++ [**Free Support Forum**](https://forum.aspose.cloud/c/cad)
++ [**Paid Support Helpdesk**](https://helpdesk.aspose.cloud/)
++ [**Blog**](https://blog.aspose.cloud/category/video/)
