@@ -20,7 +20,7 @@ This repository contains Aspose.Video Cloud SDK for .NET source code. This SDK a
 See [API Reference](https://apireference.aspose.cloud/video/) for full API specification.
 
 ## How to use the SDK?
-The complete source code is available in this repository folder. You can either directly use it in your project via source code or get [NuGet distribution](https://www.nuget.org/packages/Aspose.Video-Cloud/) (recommended). For more details, please visit our [documentation website](https://docs.aspose.cloud/display/Videocloud/Available+SDKs#AvailableSDKs-.NET).
+The complete source code is available in this repository folder. You can either directly use it in your project via source code or get [NuGet distribution](https://www.nuget.org/packages/Aspose.Video-Cloud/) (recommended). For more details, please visit our [documentation website](https://docs.aspose.cloud/video/available-sdks/).
 
 ### Prerequisites
 
@@ -67,7 +67,7 @@ VideoApi.PostConvertVideo(request);
 + [**Web API reference**](https://apireference.aspose.cloud/video/)
 + [**Website**](https://www.aspose.cloud/)
 + [**Product Home**](https://products.aspose.cloud/video)
-+ [**Documentation**](https://docs.aspose.cloud/display/videocloud/Home)
++ [**Documentation**](https://docs.aspose.cloud/video/)
 + [**Free Support Forum**](https://forum.aspose.cloud/c/cad)
 + [**Paid Support Helpdesk**](https://helpdesk.aspose.cloud/)
 + [**Blog**](https://blog.aspose.cloud/category/video/)
