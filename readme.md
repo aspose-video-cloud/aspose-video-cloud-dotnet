@@ -33,14 +33,16 @@ Register an account at [Aspose Cloud Dashboard](https://dashboard.aspose.cloud/#
 - .NET Framework 2.0 or later
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/)
 
-## Convert AVI to MP4 in the Cloud
+## Convert AVI to MP4 in C# .Net
 
 ```csharp
-var VideoApi = new VideoApi(AppKey, AppSID);
-ConvertOptions options = new ConvertOptions();
-var request = new PostConvertVideoRequest("original.avi", "mp4", "destination.mp4", options);
-VideoApi.PostConvertVideo(request);        
-
+	// Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
+	
+	var videoApi = new OcrApi("MY_CLIENT_SECRET", "MY_CLIENT_ID", "api.aspose.cloud");
+	
+	ConvertOptions options = new ConvertOptions();
+	var request = new PostConvertVideoRequest("original.avi", "mp4", "destination.mp4", options);
+	videoApi.PostConvertVideo(request);
 ```
 
 [Home](https://www.aspose.cloud) | [Product Page](https://products.aspose.cloud/video/net) | [Documentation](https://docs.aspose.cloud/video/) | [API Reference](https://apireference.aspose.cloud/video/) | [Code Samples](https://github.com/aspose-video-cloud/aspose-video-cloud-dotnet/tree/master/Aspose.Video.Cloud.Sdk.Tests) | [Blog](https://blog.aspose.cloud/category/video/) | [Free Support](https://forum.aspose.cloud/c/video) | [Free Trial](https://dashboard.aspose.cloud/#/apps)
